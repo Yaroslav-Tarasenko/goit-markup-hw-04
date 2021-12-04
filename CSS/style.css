@@ -158,16 +158,13 @@ body {
   align-items: center;
 }
 
-.head-right-link{
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.head-right-link:not(:nth-child(2n)){
-  margin-right: 30px;
+.head-right-link:last-child{
+  margin-right: 0;
 }
 
 .head-right-link {
+    padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--header-contacts-color);
 }
 
@@ -187,8 +184,8 @@ body {
   color: var(--accent-color);
 }
 
-.head-right-item:first-child{
-  margin-right: 10px;
+.head-right-item{
+  margin-right: 30px;
 }
 
 .head-right-item:last-child{
@@ -221,7 +218,9 @@ body {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_images/header-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
+  background-size: cover;
+  width: 1600px;
+  margin: 0 auto;
 }
 /*---------------button-style---------------*/
 .order-button {
@@ -529,7 +528,11 @@ letter-spacing: 0.03em;
 .regular-clients-link:hover .our-clients-icon,
 .regular-clients-link:focus .our-clients-icon{
   fill: var(--accent-color);
-  border-color: var(--accent-color);
+}
+
+.regular-clients-link:hover ,
+.regular-clients-link:focus {
+  border: 1px solid var(--accent-color);
 }
 
 /*---------------footer-style---------------*/
@@ -640,8 +643,16 @@ text-transform: uppercase;
 }
 
 .footer-social-title{
-  display: flex;
-  align-items: flex-start;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+display: block;
+  text-align: start;
+  margin-bottom: 20px;
 }
 
 .footer-social-item{
@@ -711,6 +722,7 @@ text-transform: uppercase;
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
+  cursor: pointer;
 }
 
 .portfolio-button-active {
@@ -731,7 +743,7 @@ text-transform: uppercase;
   background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
   0px 2px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
+  
 }
 
 /*---------------header-exact-as-previous------*/
