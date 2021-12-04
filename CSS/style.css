@@ -104,7 +104,7 @@ body {
 
 .logo-link-header{
   display: block;
-  margin-right: 50px;
+  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -112,7 +112,7 @@ body {
 .head-right {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.06;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-contacts-color);
 }
@@ -124,7 +124,6 @@ body {
 .head-container{
   display: flex;
   align-items: center;
-  margin-left: 0;
 }
 
 .head-list {
@@ -149,36 +148,27 @@ body {
   margin-right: auto;
 }
 
-.header-main-container{
+.head-right {
   display: flex;
+  align-items: center;
 }
 
-.head-right{
+.head-right-item{
   display: flex;
   align-items: center;
 }
 
 .head-right-link{
-  display: block;
-  padding-bottom: 32px;
   padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-a[href^="tel:"]{
-    color: var(--header-contacts-color);
-}
-
-a[href^="mailto:"]{
-  color: var(--header-contacts-color);
-}
-
-.head-right-item{
+.head-right-link:not(:nth-child(2n)){
   margin-right: 30px;
-    color: var(--header-contacts-color);
 }
 
-.head-right-item:last-child{
-  margin-right: 0;
+.head-right-link {
+  color: var(--header-contacts-color);
 }
 
 .head-right-link:hover,
@@ -187,12 +177,9 @@ a[href^="mailto:"]{
 }
 
 .head-right-social-icon{
-  align-items: baseline;
   margin-right: 10px;
-}
-
-.head-right-social-icon{
-  fill: currentColor;
+  vertical-align: middle;
+    fill: currentColor;
 }
 
 .head-right-link:hover .head-right-link-icon,
@@ -200,9 +187,16 @@ a[href^="mailto:"]{
   color: var(--accent-color);
 }
 
+.head-right-item:first-child{
+  margin-right: 10px;
+}
+
+.head-right-item:last-child{
+  margin-right: 0px;
+}
 
 .head-information{
-  border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
 }
 
 /*---------------main part style---------------*/
@@ -227,7 +221,7 @@ a[href^="mailto:"]{
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_images/header-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 1600px;
 }
 /*---------------button-style---------------*/
 .order-button {
@@ -264,7 +258,7 @@ a[href^="mailto:"]{
 .features-list-title {
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.06;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-title-color);
@@ -292,7 +286,7 @@ a[href^="mailto:"]{
 .features-list-text {
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.46;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--article-color);
 }
@@ -302,6 +296,7 @@ a[href^="mailto:"]{
 }
 
 .features-item {
+  width: 270px;
   margin-right: 30px;
 }
 
@@ -325,10 +320,7 @@ a[href^="mailto:"]{
 }
 
 .features-icon-item{
-  border-top: 1px solid #F5F4FA;
-  border-right: 1px solid #F5F4FA;
-  border-left: 1px solid #F5F4FA;
-  border-bottom: 1px solid #F5F4FA;
+  /*border: 1px solid #F5F4FA;*/
   margin-right: 30px;
   margin-bottom: 30px;
   border-radius: 4%;
@@ -523,7 +515,7 @@ letter-spacing: 0.03em;
   margin-right: 0;
 }
 
-.regular-clients-container{
+.regular-clients-link{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -533,6 +525,7 @@ letter-spacing: 0.03em;
   border-radius: 4%;
 }
 
+
 .regular-clients-link:hover .our-clients-icon,
 .regular-clients-link:focus .our-clients-icon{
   fill: var(--accent-color);
@@ -541,7 +534,7 @@ letter-spacing: 0.03em;
 
 /*---------------footer-style---------------*/
 
-.logo-link-footer  {
+.logo-link-footer {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -636,8 +629,6 @@ text-transform: uppercase;
 }
 
 .footer-social-title{
-  display: flex;
-  align-items: flex-start;
   text-align: center;
   color: #ffffff;
   margin-bottom: 20px;
@@ -646,6 +637,11 @@ text-transform: uppercase;
 .footer-social-list{
   display: flex;
   flex-direction: row;
+}
+
+.footer-social-title{
+  display: flex;
+  align-items: flex-start;
 }
 
 .footer-social-item{
@@ -769,10 +765,15 @@ text-transform: uppercase;
   margin-bottom: 30px;
 }
 
-.portfolio-examples-item:hover ,
-.portfolio-examples-item:focus-within {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-  0px 2px 2px rgba(0, 0, 0, 0.12);
+.portfolio-box{
+  display: inline-block;
+}
+
+.portfolio-box:hover ,
+.portfolio-box:focus-within {
+  box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06), 
+  1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
 
